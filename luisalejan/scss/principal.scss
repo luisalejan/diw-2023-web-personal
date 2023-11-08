@@ -1,29 +1,16 @@
-$color-1-claro: #3570b4;
-$color-2-claro: #76c3e2;
-$color-3-claro: #42aa8b;
-$color-4-claro: #c9916c;
-$color-5-claro: #0c2a38;
+$color-1-claro: #e0edfe;
+$color-2-claro: #b9dafe;
+$color-3-claro: #7cbefd;
+$color-4-claro: #369dfa;
+$color-5-claro: #0c80eb;
 
 $colores-oscuros : (
-  #2a445c,
-  #155594,
-  #026e6e,
-  #806602,
-  #d4cfcf
-);
+#0063c9,	
+#014fa3,	
+#064991,	
+#0b396f,	
+#07244a		
 
-
-
-$tamanios-iconos-horizontal : (
- 'pequenio':5%, 
- 'medio':15%,
- 'grande':100px
-);
-
-$tamanios-iconos-contenido : (
- 'pequenio':8%, 
- 'medio':35%,
- 'grande':100px
 );
 
 
@@ -42,17 +29,30 @@ $tamanios-iconos-contenido : (
     --color-4:  #{nth($colores-oscuros,4)};
     --color-5:  #{nth($colores-oscuros,5)};
   }  
-} 
+}
 
+$tamanios-iconos-footer-horizontal : (
+ 'pequenio':5%, 
+ 'medio':15%,
+ 'grande':100px
+);
+$tamanios-iconos-footer-vertical : (
+ 'pequenio':5px, 
+ 'medio':15px,
+ 'grande':100px
+);
 
+$tamanios-iconos-contenido : (
+ 'pequenio':8%, 
+ 'medio':35%,
+ 'grande':100px
+);
 
-
-
-//map-get(%tamanios-horizontal-fijo,"grande")
+ 
 
 /* MODO DEBUG*/
 // Ver IF, en el partial principal.....
-$debug:true;
+$debug: false;
 
 
 * {
@@ -66,10 +66,8 @@ $debug:true;
 @import "./partial_principal/_footer_principal.scss";
 @import "./partial_principal/_contenido_principal.scss";
 
-//@import "./partial_principal/_footer_principal.scss";
-
-
 body {
     margin: 0px;
+    background-color: #f0f6ff;
 }
 

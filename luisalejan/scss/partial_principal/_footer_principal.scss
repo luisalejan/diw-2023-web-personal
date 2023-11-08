@@ -1,28 +1,38 @@
 footer {
     position: fixed;
-    width: 100%;
     bottom: 30px;
-    background-color: var(--color-1);
-    filter: drop-shadow(5px 10px 4px var(--color-2));
+    background-color: var(--color-3);
+    filter: drop-shadow(5px 10px 4px var(--color-4));
+}
+@keyframes giro {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
-    ul {
-        display: block;
+ul{
+    display: block;
+   
+}
+$redes-sociales: github linkedin gmail whatsapp;
 
-
+.redes-sociales {
+ 
+    @each $red in $redes-sociales {
+        list-style: none;
         li {
-            list-style: none;
-            /*display: inline-block;  no funciona*/
-            width: 24.5%;
+            display: inline-block;
+            width: 24%;
             text-align: center;
-            float: left;
-
-
-            .iconofooter {
-
-                width: map-get($tamanios-iconos-horizontal , "medio");
-
-                /*no usar margin para centrar*/
+            .iconofooter {            
+                background-image: url("iconos/#{$red}.png");
+                width: map-get($tamanios-iconos-footer-horizontal, 'medio');
+                animation: giro 4s 2 linear; 
             }
         }
     }
+
 }
