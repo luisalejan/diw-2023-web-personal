@@ -1,9 +1,10 @@
+/*estilo*/
 :root .tema-claro {
   --color-1: #e0edfe;
   --color-2: #b9dafe;
-  --color-3: #7cbefd;
-  --color-4: #369dfa;
-  --color-5: #0c80eb;
+  --color-3: #6cb6fb;
+  --color-4: #0063c9;
+  --color-5: #014fa3;
 }
 :root .tema-oscuro {
   --color-1: #0063c9;
@@ -67,6 +68,7 @@ input:checked + .slider-5 {
   left: 0px;
 }
 
+/*menu_superior*/
 header {
   position: sticky;
   background-color: var(--color-3);
@@ -82,7 +84,7 @@ h1.menu {
   /*Heigut tiene q ir si no, el  h1 medio , se pierde*/
   /* height: 50px;*/
   font-family: cursive;
-  color: var(--color-1);
+  color: var(--color-5);
 }
 
 html {
@@ -100,12 +102,13 @@ html {
 }
 
 body {
-  height: 80px;
+  height: 100px;
 }
 
 footer {
   position: fixed;
-  bottom: 30px;
+  bottom: 15px;
+  width: 100%;
   background-color: var(--color-3);
   filter: drop-shadow(5px 10px 4px var(--color-4));
 }
@@ -118,6 +121,7 @@ footer {
     transform: rotate(360deg);
   }
 }
+/*anidamientos*/
 ul {
   display: block;
 }
@@ -135,6 +139,7 @@ ul {
 }
 .redes-sociales li .iconofooter {
   background-image: url("iconos/github.png");
+  /*mapas*/
   width: 15%;
   animation: giro 4s 2 linear;
 }
@@ -145,6 +150,7 @@ ul {
 }
 .redes-sociales li .iconofooter {
   background-image: url("iconos/linkedin.png");
+  /*mapas*/
   width: 15%;
   animation: giro 4s 2 linear;
 }
@@ -155,6 +161,7 @@ ul {
 }
 .redes-sociales li .iconofooter {
   background-image: url("iconos/gmail.png");
+  /*mapas*/
   width: 15%;
   animation: giro 4s 2 linear;
 }
@@ -165,61 +172,91 @@ ul {
 }
 .redes-sociales li .iconofooter {
   background-image: url("iconos/whatsapp.png");
+  /*mapas*/
   width: 15%;
   animation: giro 4s 2 linear;
 }
 
+main {
+  clear: left;
+}
+main div {
+  display: inline;
+}
+
 div {
+  text-align: center;
   width: 33.33%;
   float: left;
   padding-top: 200px;
-  height: 700px;
   text-align: center;
 }
 
 .iconomedio {
   width: 35%;
   position: relative;
-  padding-top: -30%;
-  filter: drop-shadow(5px 10px 4px var(--color-4));
+  top: -20px;
+  filter: drop-shadow(5px 10px 4px var(--color-5));
+  animation: rotar 4s linear;
+  text-align: center;
+  left: 20px;
 }
 
+@keyframes rotar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .img {
   width: 50%;
   display: none;
+}
+
+section h1 {
+  text-align: center;
 }
 
 .iconoside {
   width: 8%;
   position: relative;
   left: 10%;
+  animation: caer 1s ease-in-out forwards;
 }
 
+@keyframes caer {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 article {
   padding-top: 5%;
   display: inline-block;
 }
 
-main {
-  clear: left;
-}
-
-.central {
-  padding-top: 50px;
-}
-
 .nombre {
-  font-size: 500%;
+  font-size: 300%;
   font-family: "Tangerine", cursive;
+  position: relative;
+  top: -25px;
 }
 
 .apellido {
   font: caption;
-  font-size: 250%;
+  font-size: 200%;
+  position: relative;
+  top: -30px;
 }
 
 section {
   display: block;
+  position: relative;
+  top: -60px;
 }
 
 .titulo {
@@ -234,9 +271,14 @@ p.en-construccion img {
   display: none;
 }
 
+.central {
+  padding-top: 50px;
+  text-align: center;
+}
+
 body {
   margin: 0px;
   background-color: #f0f6ff;
 }
 
-/*# sourceMappingURL=principal.css.map */
+/*# sourceMappingURL=estilos_principal.css.map */
